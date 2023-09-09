@@ -6,7 +6,7 @@
 int main(void)
 {
 	int ones = '0';
-	int tens = 'o';
+	int tens = '0';
 
 	for (tens = '0'; tens <= '9'; tens++)
 	{
@@ -19,13 +19,13 @@ int main(void)
 				if (!(ones == '9' && tens == '8'))
 				{
 					putchar(',');
-					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
-	putchar{'\n');
+	putchar('\n');
 	return (0);
-	}
+}
 
 	
