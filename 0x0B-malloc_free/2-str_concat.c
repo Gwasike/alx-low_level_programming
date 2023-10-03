@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
+ * str_concat - that concatenates two strings
  * @s1: the first string to concatenate
- * @s2: the second sttring to concatenate
+ * @s2: the second string to concatenate
  *
  * Return: the two strings concatenated
  */
 char *str_concat(char *s1, char *s2)
 {
-	int k = 0, l = 0, m = 0, n = 0;
+	int a = 0, b = 0, c = 0, d = 0;
 	char *s;
 
 	if (s1 == NULL)
@@ -20,28 +20,33 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[k])
-		k++;
-	while (s2[l])
-		l++;
-	s = k + l;
-	s = malloc((sizeof(char) * s) + 1);
+	while (s1[a])
+		a++;
+	while (s2[b])
+		b++;
+
+	d = a + b;
+	s = malloc((sizeof(char) * d) + 1);
 
 	if (s == NULL)
 		return (NULL);
-	l = 0;
 
-	while (m < l)
+	b = 0;
+
+	while (c < d)
 	{
-		if (m <= k)
-			s[m] = s1[m];
-		if (m >= k)
+		if (c <= a)
+			s[c] = s1[c];
+
+		if (c >= a)
 		{
-			s[m] = s2[n];
-			n++;
+			s[c] = s2[b];
+			b++;
 		}
-		m++;
+		c++;
 	}
-	s[m] = '\0';
+
+	s[c] = '\0';
 	return (s);
 }
+
