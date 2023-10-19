@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * free_list - function that frees 
+ * free_list - function that frees
  * @head: ...
  * Return: none
  */
