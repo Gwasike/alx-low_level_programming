@@ -6,17 +6,18 @@
  * print_listint - function that prints all the elements
  * @h: head
  *
- * Return: Always 0
+ * Return: ...
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t present = 0;
+	size_t node_count = 0;
+	const listint_t *present = h;
 
-	while (h)
+	while (present != NULL)
 	{
 		printf("%d/n", h->n);
-		present++;
-		h = h->next;
+		node_count++;
+		present = present->next;
 	}
 	return (present);
 }
