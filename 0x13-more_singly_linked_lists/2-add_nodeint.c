@@ -6,15 +6,15 @@
 /**
  * add_nodeint - function that adds a new node at the beginning
  * @head: ...
- * @str: ...
+ * @n: ...
  *
- * Return: Always 0
+ * Return: ...
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	list_t *node;
-	int length = 0;
+	
 
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
@@ -23,9 +23,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	while (str[length])
 		length++;
 
-	node->len = length;
-	node->str = strdup(str);
+	node->n = n;
 	node->next = *head;
+
 	*head = node;
 	return (node);
 }
